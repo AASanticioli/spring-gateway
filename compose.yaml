@@ -1,0 +1,31 @@
+services:
+  httpbin:
+    image: kennethreitz/httpbin
+    container_name: httpbin
+    hostname: httpbin
+    ports:
+      - 80
+    restart: always
+    networks:
+      - harpy-network
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: ${BUILD_DATE:-$(date +%Y-%m-%d-%H-%M-%S)}
+    container_name: gateway
+    hostname: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - httpbin
+    restart: always
+    networks:
+      - harpy-network
+
+
+networks:
+  harpy-network:
+
