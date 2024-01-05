@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "3.2.1"
 	id("io.spring.dependency-management") version "1.1.4"
-	kotlin("jvm") version "1.9.21"
-	kotlin("plugin.spring") version "1.9.21"
+	kotlin("jvm") version "1.9.22"
+	kotlin("plugin.spring") version "1.9.22"
 }
 
 group = "com.example"
@@ -39,14 +39,18 @@ dependencies {
 	/* Starter for building WebFlux applications using Spring Framework's Reactive Web support*/
 	implementation("org.springframework.boot:spring-boot-starter-webflux:3.2.1")
 
-	/***************************** Spring Boot DevTools ***********************************************/
+	/***************************** Spring Boot DevTools ************************************************/
 	/* Spring Boot Developer Tools*/
 	implementation( "org.springframework.boot:spring-boot-devtools:3.2.1")
 
 
-	/***************************** Spring Boot Starter Test *******************************************/
+	/***************************** Spring Boot Starter Test ********************************************/
 	/* Starter for testing Spring Boot applications with libraries including JUnit Jupiter, Hamcrest and Mockito*/
 	testImplementation("org.springframework.boot:spring-boot-starter-test:3.2.1")
+
+	/***************************** Kermit **************************************************************/
+	/* Kermit The Log */
+	implementation("co.touchlab:kermit:2.0.2")
 }
 
 extra["springCloudVersion"] = "2023.0.0"

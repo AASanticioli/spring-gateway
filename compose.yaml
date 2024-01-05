@@ -22,6 +22,8 @@ services:
     depends_on:
       - httpbin
     restart: always
+    volumes:
+      - gradle-cache:/root/.gradle
     networks:
       - harpy-network
 
@@ -29,3 +31,6 @@ services:
 networks:
   harpy-network:
 
+volumes:
+  gradle-cache:
+    driver: local
