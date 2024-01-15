@@ -32,12 +32,8 @@ dependencies {
 
 	/***************************** Spring Cloud Starter Gateway ****************************************/
 	/* Spring Cloud Starter */
-	implementation("org.springframework.cloud:spring-cloud-starter-gateway:4.1.1")
+	implementation("org.springframework.cloud:spring-cloud-starter-gateway-mvc:4.1.1")
 
-
-	/***************************** Spring Boot Starter WebFlux *****************************************/
-	/* Starter for building WebFlux applications using Spring Framework's Reactive Web support*/
-	implementation("org.springframework.boot:spring-boot-starter-webflux:3.2.1")
 
 	/***************************** Spring Boot DevTools ************************************************/
 	/* Spring Boot Developer Tools*/
