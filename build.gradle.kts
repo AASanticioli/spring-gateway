@@ -35,9 +35,25 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway-mvc:4.1.1")
 
 
+	/***************************** Spring Boot Starter Data JPA ****************************************/
+	/* Starter for using Spring Data JPA with Hibernate */
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.2.1")
+
+
+	/***************************** H2 Database Engine **************************************************/
+	/* A fast SQL database that can run embedded or a server mode with support for transactions, encryption, full search, etc.
+	Storage can be disk-based or in-memory. */
+	implementation("com.h2database:h2:2.2.224")
+
+
+	/***************************** Spring Boot Starter Web ********************************************/
+	/* Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container */
+	implementation("org.springframework.boot:spring-boot-starter-web:3.2.1")
+
+
 	/***************************** Spring Boot DevTools ************************************************/
 	/* Spring Boot Developer Tools*/
-	implementation( "org.springframework.boot:spring-boot-devtools:3.2.1")
+//	implementation( "org.springframework.boot:spring-boot-devtools:3.2.1")
 
 
 	/***************************** Spring Boot Starter Test ********************************************/
@@ -47,6 +63,12 @@ dependencies {
 	/***************************** Kermit **************************************************************/
 	/* Kermit The Log */
 	implementation("co.touchlab:kermit:2.0.2")
+
+	/***************************** Jackson Module Kotlin ***********************************************/
+	/* Add-on module for Jackson (https://github.com/FasterXML/jackson/) to support Kotlin language,
+	specifically introspection of method/constructor parameter names without having to add explicit property name annotation. */
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1")
+
 }
 
 extra["springCloudVersion"] = "2023.0.0"
